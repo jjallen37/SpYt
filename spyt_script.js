@@ -1,6 +1,7 @@
 // Create reference to video element
 var vid = document.getElementsByTagName('video')[0];
-// Create Menu Div
+
+// Create Menu Divs
 var lCtrl = document.createElement("div");
 lCtrl.setAttribute("class", "menu-div");
 lCtrl.setAttribute("id", "left-ctrl");
@@ -34,6 +35,10 @@ var body = document.getElementsByTagName("body")[0];
 body.insertBefore(rCtrl, body.firstChild);
 body.insertBefore(lCtrl, body.firstChild);
 
+/*
+    Functions and Constants
+*/ 
+// Factory function to make menu buttons  
 function createMenuButton(btnText, func) {
     var menuBtn = document.createElement('button');
     menuBtn.setAttribute('type', 'button');
