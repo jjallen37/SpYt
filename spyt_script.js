@@ -2,9 +2,11 @@
 var vid = document.getElementsByTagName('video')[0];
 // Create Menu Div
 var lCtrl = document.createElement("div");
-lCtrl.setAttribute("id", "control-bar");
+lCtrl.setAttribute("class", "menu-div");
+lCtrl.setAttribute("id", "left-ctrl");
 var rCtrl = document.createElement("div");
-rCtrl.setAttribute("id", "control-bar");
+rCtrl.setAttribute("class", "menu-div");
+rCtrl.setAttribute("id", "right-ctrl");
 
 // Create menu buttons
 var rwBtn1 = createMenuButton('RW 1', function(e){
@@ -23,12 +25,13 @@ var ffBtn2 = createMenuButton('FF 2', function(e){
 // Add buttons to menu
 lCtrl.appendChild(rwBtn1);
 lCtrl.appendChild(rwBtn2);
-lCtrl.appendChild(ffBtn1);
-lCtrl.appendChild(ffBtn2);
+rCtrl.appendChild(ffBtn1);
+rCtrl.appendChild(ffBtn2);
 
 // Add menu to body
 // var body = document.body;
 var body = document.getElementsByTagName("body")[0];
+body.insertBefore(rCtrl, body.firstChild);
 body.insertBefore(lCtrl, body.firstChild);
 
 function createMenuButton(btnText, func) {

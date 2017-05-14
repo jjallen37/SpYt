@@ -1,10 +1,18 @@
-#control-bar {
+.menu-div {
     background-color: gray;
     z-index: 1000;
     width: 15vw;
     height: 200px;
     position: fixed;
     top: 100px;
+}
+
+#left-ctrl{
+    background-color: blue;
+}
+
+#right-ctrl{
+    left: 100%;
 }
 
 .menu-btn {
