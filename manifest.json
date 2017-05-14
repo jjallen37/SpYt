@@ -1,0 +1,13 @@
+{
+  "name": "Surface Pro YouTube Controls",
+  "version": "0.1",
+  "description": "Better touch controls on youtube for Surface Pro",
+  "content_scripts": [ {
+    "css": [ "spyt.css" ],
+    "js": [ "spyt_script.js" ],
+    "matches": ["https://*.youtube.com/*"],
+    "run_at": "document_end"
+  }],
+  "permissions": ["https://*.youtube.com/*"],
+  "manifest_version": 2
+}
